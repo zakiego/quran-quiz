@@ -21,7 +21,8 @@
   "types": "./dist/types/index.d.ts",
   "scripts": {
     "build": "bunchee --external=vitest,vite-tsconfig-paths -m",
-    "test": "vitest"
+    "test": "vitest",
+    "release": "pnpm run build && changeset publish"
   },
   "dependencies": {
     "zod": "^3.21.4"
