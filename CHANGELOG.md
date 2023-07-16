@@ -1,5 +1,11 @@
 # quran-quiz
 
+## 0.0.5
+
+### Patch Changes
+
+- 1bd1d2b: fix set private false
+
 ## 0.0.4
 
 ### Patch Changes
