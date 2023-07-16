@@ -1,5 +1,11 @@
 # quran-quiz
 
+## 0.0.6
+
+### Patch Changes
+
+- 3aeb1d7: set access to public
+
 ## 0.0.5
 
 ### Patch Changes
