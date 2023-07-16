@@ -1,5 +1,5 @@
-import * as fs from "fs";
 import { z } from "zod";
+import data from "~/data/quran.json";
 
 export const quranSchema = z.object({
   id: z.number(),
@@ -24,7 +24,7 @@ export const getData = () => {
     .object({
       verses: z.array(quranSchema),
     })
-    .safeParse(JSON.parse(fs.readFileSync("./src/data/quran.json", "utf-8")));
+    .safeParse(data);
 
   if (!parse.success) {
     throw new Error("Failed to parse data");
