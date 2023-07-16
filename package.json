@@ -1,6 +1,7 @@
 {
   "name": "quran-quiz",
   "version": "0.0.4",
+  "private": false,
   "description": "",
   "keywords": [],
   "author": "",
