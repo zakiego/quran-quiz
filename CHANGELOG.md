@@ -1,5 +1,11 @@
 # quran-quiz
 
+## 0.0.4
+
+### Patch Changes
+
+- e55e656: add readme
+
 ## 0.0.2
 
 ### Patch Changes
