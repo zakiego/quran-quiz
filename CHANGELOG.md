@@ -1,5 +1,11 @@
 # quran-quiz
 
+## 0.0.9
+
+### Patch Changes
+
+- c219fd1: fix index
+
 ## 0.0.8
 
 ### Patch Changes
