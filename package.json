@@ -2,9 +2,13 @@
   "name": "quran-quiz",
   "version": "0.0.7",
   "private": false,
-  "description": "",
-  "keywords": [],
-  "author": "",
+  "description": "A quiz game for the Quran",
+  "keywords": [
+    "quran",
+    "quiz"
+  ],
+  "author": "Zakiego",
+  "main": "index.js",
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
