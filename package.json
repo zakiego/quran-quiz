@@ -7,7 +7,10 @@
     "quran",
     "quiz"
   ],
-  "author": "Zakiego",
+  "author": {
+    "name": "Zakiego",
+    "url": "https://zakiego.com"
+  },
   "main": "index.js",
   "license": "ISC",
   "devDependencies": {
@@ -25,7 +28,7 @@
   },
   "types": "./dist/types/index.d.ts",
   "scripts": {
-    "build": "bunchee --external=vitest,vite-tsconfig-paths -m",
+    "build": "bunchee -m",
     "test": "vitest",
     "release": "pnpm run build && changeset publish"
   },
