@@ -1,5 +1,11 @@
 # quran-quiz
 
+## 0.0.7
+
+### Patch Changes
+
+- 46d9bd6: add guessVerseByJuz
+
 ## 0.0.6
 
 ### Patch Changes
