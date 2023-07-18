@@ -42,6 +42,15 @@ export const getManyVerseIdByChapter = (select: number[]) => {
   }, []);
 };
 
+export const getManyVerseIdByJuz = (select: number[]) => {
+  return getData().reduce((result: number[], item) => {
+    if (select.includes(item.juz_number)) {
+      result.push(item.id);
+    }
+    return result;
+  }, []);
+};
+
 export const getVerseTextById = (id: number) => {
   const find = getData().find((item) => item.id === id);
 
