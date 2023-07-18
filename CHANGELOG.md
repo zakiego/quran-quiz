@@ -1,5 +1,11 @@
 # quran-quiz
 
+## 0.0.8
+
+### Patch Changes
+
+- f45fa0e: fix entry pooint
+
 ## 0.0.7
 
 ### Patch Changes
