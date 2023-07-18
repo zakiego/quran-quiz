@@ -33,7 +33,7 @@ export const getData = () => {
   return parse.data.verses;
 };
 
-export const getManyVerseIdByChapter = (select: number[]) => {
+export const getManyVerseIdBySurah = (select: number[]) => {
   return getData().reduce((result: number[], item) => {
     if (select.includes(item.chapter_id)) {
       result.push(item.id);

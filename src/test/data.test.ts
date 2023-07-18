@@ -1,4 +1,4 @@
-import { getData, getManyVerseIdByChapter, getVerseTextById } from "~/data";
+import { getData, getManyVerseIdBySurah, getVerseTextById } from "~/data";
 
 describe("getData", () => {
   it("should return array of data from quran.json with length 6236", () => {
@@ -7,9 +7,9 @@ describe("getData", () => {
   });
 });
 
-describe("getManyVersesIdByChapter", () => {
+describe("getManyVersesIdBySurah", () => {
   it("should return array of id", () => {
-    const data = getManyVerseIdByChapter([1, 2]);
+    const data = getManyVerseIdBySurah([1, 2]);
     expect(data).toHaveLength(7 + 286);
   });
 });

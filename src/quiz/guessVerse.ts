@@ -1,18 +1,14 @@
 import { z } from "zod";
 import {
-  getManyVerseIdByChapter,
+  getManyVerseIdBySurah,
   getManyVerseIdByJuz,
   getVerseTextById,
 } from "~/data";
 import { createQuiz, getIndexOfQuestionAnswerOptions } from "~/quiz/helpers";
+import { GuessVerse } from "~/quiz/types";
 import { sort } from "~/utils/sort";
 
-interface GuessVerse {
-  select: number[];
-  amount: number;
-}
-
-const guessVerseByChapter = (props: GuessVerse) => {
+const guessVerseBySurah = (props: GuessVerse) => {
   const schema = z.object({
     select: z
       .array(
@@ -23,7 +19,7 @@ const guessVerseByChapter = (props: GuessVerse) => {
           .min(1, "Must be between 1 and 114")
           .max(114, "Must be between 1 and 114"),
       )
-      .min(1, "Select at least one chapter"),
+      .min(1, "Select at least one surah"),
     amount: z.number().min(1),
   });
 
@@ -31,7 +27,7 @@ const guessVerseByChapter = (props: GuessVerse) => {
 
   const { select, amount } = parse;
 
-  const verses = getManyVerseIdByChapter(select);
+  const verses = getManyVerseIdBySurah(select);
 
   const data = [];
 
@@ -54,7 +50,7 @@ const guessVerseByChapter = (props: GuessVerse) => {
   return {
     data,
     meta: {
-      type: "guessVerseByChapter",
+      type: "guessVerseBySurah",
       select: sort(select),
       amount,
     },
@@ -73,7 +69,7 @@ const guessVerseByJuz = (props: GuessVerse) => {
           .max(30, "Must be between 1 and 30"),
       )
 
-      .min(1, "Select at least one chapter"),
+      .min(1, "Select at least one surah"),
     amount: z.number().min(1),
   });
 
@@ -112,6 +108,6 @@ const guessVerseByJuz = (props: GuessVerse) => {
 };
 
 export const guessVerse = {
-  byChapter: guessVerseByChapter,
+  bySurah: guessVerseBySurah,
   byJuz: guessVerseByJuz,
 };
