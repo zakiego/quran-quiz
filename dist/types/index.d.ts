@@ -17,6 +17,20 @@ declare const guessVerse: {
             amount: number;
         };
     };
+    byJuz: (props: GuessVerse) => {
+        data: {
+            question: string;
+            options: {
+                text: string;
+                value: number;
+            }[];
+        }[];
+        meta: {
+            type: string;
+            select: number[];
+            amount: number;
+        };
+    };
 };
 
 export { guessVerse };
