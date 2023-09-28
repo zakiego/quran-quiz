@@ -41,38 +41,7 @@ export const getIndexOfQuestionAnswerOptions = (
   };
 };
 
-interface CreateQuiz {
-  indexOf: {
-    question: number;
-    answer: number;
-    options: number[];
-  };
-  getter: (id: number) => string;
-}
-
-export const createQuiz = (props: CreateQuiz) => {
-  const { indexOf, getter } = props;
-
-  const result = {
-    question: getter(indexOf.question),
-    options: [
-      ...indexOf.options.map((option) => {
-        return {
-          text: getter(option),
-          value: 0,
-        };
-      }),
-      {
-        text: getter(indexOf.answer),
-        value: 1,
-      },
-    ],
-  };
-
-  return randomizeOptions(result);
-};
-
-const randomizeOptions = (result: {
+export const randomizeOptions = (result: {
   question: string;
   options: { text: string; value: number }[];
 }): {
