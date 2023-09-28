@@ -15,13 +15,13 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
-    "@types/lodash": "^4.14.195",
-    "@types/node": "^20.4.1",
-    "bunchee": "^3.5.1",
+    "@types/lodash": "^4.14.199",
+    "@types/node": "^20.6.4",
+    "bunchee": "^3.9.0",
     "lodash": "^4.17.21",
-    "typescript": "^5.1.6",
-    "vite-tsconfig-paths": "^4.2.0",
-    "vitest": "^0.33.0"
+    "typescript": "^5.2.2",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.5"
   },
   "exports": {
     "module": "./dist/index.esm.js",
@@ -35,6 +35,6 @@
     "release": "pnpm run build && changeset publish"
   },
   "dependencies": {
-    "zod": "^3.21.4"
+    "zod": "^3.22.2"
   }
 }
