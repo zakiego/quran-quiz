@@ -1,5 +1,12 @@
 # quran-quiz
 
+## 0.0.11
+
+### Patch Changes
+
+- 8a5d3de: update
+- d0e7e12: update
+
 ## 0.0.9
 
 ### Patch Changes
