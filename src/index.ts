@@ -1,3 +1,2 @@
-import { guessVerse } from "./quiz/guessVerse";
-
-export { guessVerse };
+export * from "./quiz/guessVerse";
+export * from "./quiz/guessSurah";
