@@ -38,6 +38,12 @@ describe("guessVerse by surah", () => {
         guessVerse.bySurah({ select: [1], amount: 0 }),
       ).toThrowError();
     });
+
+    it("should uniq select", () => {
+      const result = guessVerse.bySurah({ select: [1, 1, 1], amount: 1 });
+
+      expect(result.meta.select).toEqual([1]);
+    });
   });
 
   describe("output", () =>
@@ -70,7 +76,7 @@ describe("guessVerse by juz", () => {
 
     it("should error if select is not between 1 and 30", () => {
       expect(() =>
-        guessVerse.byJuz({ select: [1, 2, 115], amount: 1 }),
+        guessVerse.byJuz({ select: [1, 2, 31], amount: 1 }),
       ).toThrowError();
     });
 
@@ -89,6 +95,12 @@ describe("guessVerse by juz", () => {
     it("should error if amount is less than 1", () => {
       expect(() => guessVerse.byJuz({ select: [1], amount: 0 })).toThrowError();
     });
+  });
+
+  it("should uniq select", () => {
+    const result = guessVerse.byJuz({ select: [1, 1, 1], amount: 1 });
+
+    expect(result.meta.select).toEqual([1]);
   });
 
   describe("output", () =>

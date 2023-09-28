@@ -1,10 +1,14 @@
+import { uniq } from "lodash";
 import { z } from "zod";
 import {
-  getManyVerseIdBySurah,
-  getManyVerseIdByJuz,
+  getManyVerseIdBySurahId,
+  getManyVerseIdByJuzId,
   getVerseTextById,
 } from "~/data";
-import { createQuiz, getIndexOfQuestionAnswerOptions } from "~/quiz/helpers";
+import {
+  getIndexOfQuestionAnswerOptions,
+  randomizeOptions,
+} from "~/quiz/helpers";
 import { GuessVerse } from "~/quiz/types";
 import { sort } from "~/utils/sort";
 
@@ -23,11 +27,14 @@ const guessVerseBySurah = (props: GuessVerse) => {
     amount: z.number().min(1),
   });
 
-  const parse = schema.parse(props);
+  const parse = schema.parse({
+    select: uniq(props.select),
+    amount: props.amount,
+  });
 
   const { select, amount } = parse;
 
-  const verses = getManyVerseIdBySurah(select);
+  const verses = getManyVerseIdBySurahId(select);
 
   const data = [];
 
@@ -35,13 +42,10 @@ const guessVerseBySurah = (props: GuessVerse) => {
     const { answer, options, question } =
       getIndexOfQuestionAnswerOptions(verses);
 
-    const quiz = createQuiz({
-      indexOf: {
-        answer,
-        options,
-        question,
-      },
-      getter: getVerseTextById,
+    const quiz = createGuessVerseQuiz({
+      questionVerseId: question,
+      answerVerseId: answer,
+      optionsVerseId: options,
     });
 
     data.push(quiz);
@@ -73,11 +77,14 @@ const guessVerseByJuz = (props: GuessVerse) => {
     amount: z.number().min(1),
   });
 
-  const parse = schema.parse(props);
+  const parse = schema.parse({
+    select: uniq(props.select),
+    amount: props.amount,
+  });
 
   const { select, amount } = parse;
 
-  const verses = getManyVerseIdByJuz(select);
+  const verses = getManyVerseIdByJuzId(select);
 
   const data = [];
 
@@ -85,13 +92,10 @@ const guessVerseByJuz = (props: GuessVerse) => {
     const { answer, options, question } =
       getIndexOfQuestionAnswerOptions(verses);
 
-    const quiz = createQuiz({
-      indexOf: {
-        answer,
-        options,
-        question,
-      },
-      getter: getVerseTextById,
+    const quiz = createGuessVerseQuiz({
+      questionVerseId: question,
+      answerVerseId: answer,
+      optionsVerseId: options,
     });
 
     data.push(quiz);
@@ -110,4 +114,32 @@ const guessVerseByJuz = (props: GuessVerse) => {
 export const guessVerse = {
   bySurah: guessVerseBySurah,
   byJuz: guessVerseByJuz,
+};
+
+interface CreateGuessVerseQuiz {
+  questionVerseId: number;
+  answerVerseId: number;
+  optionsVerseId: number[];
+}
+
+const createGuessVerseQuiz = (props: CreateGuessVerseQuiz) => {
+  const { questionVerseId, answerVerseId, optionsVerseId } = props;
+
+  const result = {
+    question: getVerseTextById(questionVerseId),
+    options: [
+      ...optionsVerseId.map((option) => {
+        return {
+          text: getVerseTextById(option),
+          value: 0,
+        };
+      }),
+      {
+        text: getVerseTextById(answerVerseId),
+        value: 1,
+      },
+    ],
+  };
+
+  return randomizeOptions(result);
 };
