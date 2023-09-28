@@ -21,7 +21,8 @@
     "lodash": "^4.17.21",
     "typescript": "^5.2.2",
     "vite-tsconfig-paths": "^4.2.1",
-    "vitest": "^0.34.5"
+    "vitest": "^0.34.5",
+    "zod": "^3.22.2"
   },
   "exports": {
     "module": "./dist/index.esm.js",
@@ -30,12 +31,8 @@
   },
   "types": "./dist/types/index.d.ts",
   "scripts": {
-    "build": "bunchee -m",
+    "build": "bunchee",
     "test": "vitest",
-    "release": "pnpm run build && changeset publish",
-    "changeset": "changeset"
-  },
-  "dependencies": {
-    "zod": "^3.22.2"
+    "release": "pnpm run build && changeset publish"
   }
 }
