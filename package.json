@@ -32,7 +32,8 @@
   "scripts": {
     "build": "bunchee -m",
     "test": "vitest",
-    "release": "pnpm run build && changeset publish"
+    "release": "pnpm run build && changeset publish",
+    "changeset": "changeset"
   },
   "dependencies": {
     "zod": "^3.22.2"
