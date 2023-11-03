@@ -1,5 +1,11 @@
 # quran-quiz
 
+## 0.1.0
+
+### Minor Changes
+
+- 2a0b346: Add docs link
+
 ## 0.0.11
 
 ### Patch Changes
