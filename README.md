@@ -1,3 +1,3 @@
 # Quran Quiz
 
-WORK IN PROGRESS! DO NOT USE!
+Read the docs at [quran.zakiego.com](https://quran.zakiego.com/).
