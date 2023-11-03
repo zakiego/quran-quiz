@@ -15,14 +15,14 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
-    "@types/lodash": "^4.14.199",
-    "@types/node": "^20.6.4",
-    "bunchee": "^3.9.0",
+    "@types/lodash": "^4.14.200",
+    "@types/node": "^20.8.10",
+    "bunchee": "^3.9.1",
     "lodash": "^4.17.21",
     "typescript": "^5.2.2",
     "vite-tsconfig-paths": "^4.2.1",
-    "vitest": "^0.34.5",
-    "zod": "^3.22.2"
+    "vitest": "^0.34.6",
+    "zod": "^3.22.4"
   },
   "exports": {
     "module": "./dist/index.esm.js",
