@@ -1,5 +1,11 @@
 # quran-quiz
 
+## 0.1.1
+
+### Patch Changes
+
+- 36d8936: Update all library
+
 ## 0.1.0
 
 ### Minor Changes
