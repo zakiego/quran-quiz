@@ -22,7 +22,7 @@ const guessSurahBySurah = (props: GuessVerse) => {
           .min(1, "Must be between 1 and 114")
           .max(114, "Must be between 1 and 114"),
       )
-      .min(4, "Select at least one surah"),
+      .min(4, "Select at least four surah"),
     amount: z.number().min(1),
   });
 
