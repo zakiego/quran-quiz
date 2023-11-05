@@ -1,6 +1,7 @@
 {
   "projectName": "quran-quiz",
   "projectOwner": "zakiego",
+  "skipCi": "true",
   "files": [
     "README.md"
   ],
