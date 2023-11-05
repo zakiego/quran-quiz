@@ -5,7 +5,7 @@ Read the docs at [quran.zakiego.com](https://quran.zakiego.com/).
 ## Features
 
 - [x] [Guess Verse by Surah](https://quran.zakiego.com/guess-verse#guess-verse-by-surah)
-- [x] [Guess Verse by Juz](https://quran.zakiego.com/guess-surah#guess-verse-by-juz)
+- [x] [Guess Verse by Juz](https://quran.zakiego.com/guess-verse#guess-verse-by-juz)
 - [x] [Guess Surah by Surah](https://quran.zakiego.com/guess-surah#guess-surah-by-surah)
 - [ ] Guess Surah by Juz
 
