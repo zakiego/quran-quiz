@@ -1,5 +1,7 @@
 # Quran Quiz
 
+`quran-quiz` is a library for generating quizzes about the Quran. This library is designed to enhance Quranic memorization.
+
 Read the docs at [quran.zakiego.com](https://quran.zakiego.com/).
 
 ## Features
