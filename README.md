@@ -30,7 +30,7 @@ const data = await guessSurah.bySurah({
 
 ### Response
 
-When the options.value is set to 1, it means the answer is correct, while when the options.value is set to 0, it means the answer is incorrect.
+When the `options.value` is set to 1, it means the answer is correct, while when the `options.value` is set to 0, it means the answer is incorrect.
 
 ```json
 {
