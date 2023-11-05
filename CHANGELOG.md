@@ -1,5 +1,11 @@
 # quran-quiz
 
+## 0.1.2
+
+### Patch Changes
+
+- a082e33: Update readme
+
 ## 0.1.1
 
 ### Patch Changes
