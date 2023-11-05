@@ -33,7 +33,6 @@
   "scripts": {
     "build": "bunchee",
     "test": "vitest",
-    "update": "changeset",
     "release": "pnpm run build && changeset publish"
   }
 }
