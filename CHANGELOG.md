@@ -1,5 +1,11 @@
 # quran-quiz
 
+## 0.1.3
+
+### Patch Changes
+
+- 711529f: add docs short description
+
 ## 0.1.2
 
 ### Patch Changes
