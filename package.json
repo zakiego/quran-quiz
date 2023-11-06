@@ -25,10 +25,15 @@
     "zod": "^3.22.4"
   },
   "exports": {
-    "module": "./dist/index.esm.js",
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.cjs"
+    ".": {
+      "module": "./dist/index.esm.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
   },
+  "files": [
+		"dist"
+	],
   "types": "./dist/types/index.d.ts",
   "scripts": {
     "build": "bunchee",

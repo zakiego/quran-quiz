@@ -1,2 +1,6 @@
 node_modules
 src/utils/result.json
+dist
+.DS_Store
+.AppleDouble
+.LSOverride
