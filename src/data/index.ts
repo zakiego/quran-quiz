@@ -61,6 +61,16 @@ export const getVerseTextById = (id: number) => {
   return find.text_uthmani;
 };
 
+export const getVerseKeyById = (id: number) => {
+  const find = getQuran().find((item) => item.id === id);
+
+  if (!find) {
+    throw new Error("Failed to find verse");
+  }
+
+  return find.verse_key;
+}
+
 const chapterNames = [
   "Al-Fatihah",
   "Al-Baqarah",

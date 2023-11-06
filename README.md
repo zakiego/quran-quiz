@@ -38,7 +38,10 @@ When the `options.value` is set to 1, it means the answer is correct, while when
 {
   "data": [
     {
-      "question": " قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+      "question": {
+        "text": " قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+        "verseKey": "112:1"
+      },
       "options": [
         {
           "text": "Al-Masad",

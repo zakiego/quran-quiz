@@ -3,6 +3,7 @@ import {
   getManyVerseIdBySurahId,
   getSurahBySurahId,
   getSurahByVerseId,
+  getVerseKeyById,
   getVerseTextById,
 } from "~/data";
 import { randomizeOptions } from "~/quiz/helpers";
@@ -48,7 +49,10 @@ const guessSurahBySurah = (props: GuessVerse) => {
     options = options.sort(() => 0.5 - Math.random()).slice(0, 3);
 
     return randomizeOptions({
-      question: getVerseTextById(questionVerseId),
+      question: {
+        text: getVerseTextById(questionVerseId),
+        verseKey: getVerseKeyById(questionVerseId),
+      },
       options: [
         ...options.map((option) => {
           return {
@@ -79,7 +83,10 @@ const guessSurahBySurah = (props: GuessVerse) => {
 };
 
 type CreateQuizOutput = {
-  question: string;
+  question: {
+    text: string;
+    verseKey: string;
+  };
   options: {
     text: string;
     value: number;

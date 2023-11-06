@@ -4,6 +4,7 @@ import {
   getManyVerseIdBySurahId,
   getManyVerseIdByJuzId,
   getVerseTextById,
+  getVerseKeyById,
 } from "~/data";
 import {
   getIndexOfQuestionAnswerOptions,
@@ -126,17 +127,22 @@ const createGuessVerseQuiz = (props: CreateGuessVerseQuiz) => {
   const { questionVerseId, answerVerseId, optionsVerseId } = props;
 
   const result = {
-    question: getVerseTextById(questionVerseId),
+    question: {
+      text: getVerseTextById(questionVerseId),
+      verseKey: getVerseKeyById(questionVerseId),
+    },
     options: [
       ...optionsVerseId.map((option) => {
         return {
           text: getVerseTextById(option),
           value: 0,
+          verseKey: getVerseKeyById(option),
         };
       }),
       {
         text: getVerseTextById(answerVerseId),
         value: 1,
+        verseKey: getVerseKeyById(answerVerseId),
       },
     ],
   };
