@@ -77,6 +77,7 @@ When the `options.value` is set to 1, it means the answer is correct, while when
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://zakiego.com"><img src="https://avatars.githubusercontent.com/u/78015359?v=4?s=100" width="100px;" alt="M. Zakiyuddin Munziri"/><br /><sub><b>M. Zakiyuddin Munziri</b></sub></a><br /><a href="#test-zakiego" title="Tests">⚠️</a> <a href="#code-zakiego" title="Code">💻</a> <a href="#doc-zakiego" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://iamyuu.dev"><img src="https://avatars.githubusercontent.com/u/45778229?v=4?s=100" width="100px;" alt="Yusuf"/><br /><sub><b>Yusuf</b></sub></a><br /><a href="#code-iamyuu" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
