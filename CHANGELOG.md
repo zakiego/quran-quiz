@@ -1,5 +1,11 @@
 # quran-quiz
 
+## 0.1.4
+
+### Patch Changes
+
+- 062d19d: chore: adjust exports files #23
+
 ## 0.1.3
 
 ### Patch Changes
