@@ -42,10 +42,10 @@ export const getIndexOfQuestionAnswerOptions = (
 };
 
 export const randomizeOptions = (result: {
-  question: string;
+  question: { text: string; verseKey: string };
   options: { text: string; value: number }[];
 }): {
-  question: string;
+  question: { text: string; verseKey: string };
   options: { text: string; value: number }[];
 } => {
   const randomizedOptions = [...result.options];
